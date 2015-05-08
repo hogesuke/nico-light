@@ -1,0 +1,20 @@
+{
+  "name"   : "ニコニコ動画ライト",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "ニコニコ動画の再生画面を少しだけシンプルにします。",
+  "icons": {
+    "48" : "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://www.nicovideo.jp/watch/*"],
+      "js"     : ["script.js"],
+      "run_at" : "document_start"
+    }
+  ]
+}
